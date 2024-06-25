@@ -1,97 +1,97 @@
-USER MANAGEMENT SYSTEM 
-Introduction
-This User Management System is a basic CRUD (Create, Read, Update, Delete) application for managing user information. It allows administrators to add, view, update, and delete users.
+USER MANAGEMENT SYSTEM <br>
+Introduction<br>
+This User Management System is a basic CRUD (Create, Read, Update, Delete) application for managing user information. It allows administrators to add, view, update, and delete users.<br><br>
 
-Features
-User Registration
-User Login
-Password Hashing
-User Profile Management
-User List Viewing
-Admin Dashboard
-Prerequisites
-Before you begin, ensure you have met the following requirements:
+Features<br>
+User Registration<br>
+User Login<br>
+Password Hashing<br>
+User Profile Management<br>
+User List Viewing<br>
+Admin Dashboard<br>
+Prerequisites<br>
+Before you begin, ensure you have met the following requirements:<br>
 
-PHP >= 7.2
-MySQL >= 5.7
-Apache/Nginx Server
-Composer
-Git
-Installation
-Clone the Repository
+PHP >= 7.2<br>
+MySQL >= 5.7<br>
+Apache/Nginx Server<br>
+Composer<br>
+Git<br>
+Installation<br>
+Clone the Repository<br><br>
 
-bash
-Copy code
-git clone https://github.com/yourusername/user-management-system.git
-cd user-management-system
-Install Dependencies
+bash<br>
+Copy code<br>
+git clone https://github.com/yourusername/user-management-system.git<br>
+cd user-management-system<br>
+Install Dependencies<br>
+<br>
+bash<br>
+Copy code<br>
+composer install<br>
+Configuration<br>
+Environment Variables<br><br>
 
-bash
-Copy code
-composer install
-Configuration
-Environment Variables
+Create a .env file in the root directory and add the following configurations:<br><br>
 
-Create a .env file in the root directory and add the following configurations:
+env<br>
+Copy code<br>
+DB_HOST=localhost<br>
+DB_NAME=user_management<br>
+DB_USER=root<br>
+DB_PASS=password<br>
+Apache/Nginx Configuration<br><br>
 
-env
-Copy code
-DB_HOST=localhost
-DB_NAME=user_management
-DB_USER=root
-DB_PASS=password
-Apache/Nginx Configuration
+Configure your web server to point to the public directory of the project.<br><br>
 
-Configure your web server to point to the public directory of the project.
+Database Setup<br>
+Create Database<br><br>
 
-Database Setup
-Create Database
+Create a new MySQL database:<br><br>
 
-Create a new MySQL database:
+sql<br>
+Copy code<br>
+CREATE DATABASE user_management;<br>
+Run Migrations<br><br>
 
-sql
-Copy code
-CREATE DATABASE user_management;
-Run Migrations
+Import the database.sql file to set up the required tables:<br><br>
 
-Import the database.sql file to set up the required tables:
+bash<br>
+Copy code<br>
+mysql -u root -p user_management < database.sql<br>
+Usage<br>
+Register a New User<br>
+<br>
+Navigate to /register and fill out the registration form.<br><br>
 
-bash
-Copy code
-mysql -u root -p user_management < database.sql
-Usage
-Register a New User
+Login<br><br>
 
-Navigate to /register and fill out the registration form.
+Navigate to /login and enter your credentials.<br>
 
-Login
+Admin Dashboard<br><br>
 
-Navigate to /login and enter your credentials.
+Access the admin dashboard at /admin to manage users.<br><br>
 
-Admin Dashboard
-
-Access the admin dashboard at /admin to manage users.
-
-File Structure
-arduino
-Copy code
-user-management-system/
-├── public/
-│   ├── index.php
-│   ├── css/
-│   ├── js/
-│   └── images/
-├── src/
-│   ├── controllers/
-│   ├── models/
-│   ├── views/
-│   ├── config/
-│   └── helpers/
-├── vendor/
-├── .env
-├── composer.json
-└── database.sql
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+File Structure<br>
+arduino<br>
+Copy code<br>
+user-management-system/<br>
+├── public/<br>
+│   ├── index.php<br>
+│   ├── css/<br>
+│   ├── js/<br>
+│   └── images/<br>
+├── src/<br>
+│   ├── controllers/<br>
+│   ├── models/<br>
+│   ├── views/<br>
+│   ├── config/<br>
+│   └── helpers/<br>
+├── vendor/<br>
+├── .env<br>
+├── composer.json<br>
+└── database.sql<br>
+License<br>
+This project is licensed under the MIT License. See the LICENSE file for details.<br>
 
 This README provides a clear and concise guide to setting up and using the User Management System. Adjust the repository URL and other configurations as necessary for your specific implementation.
